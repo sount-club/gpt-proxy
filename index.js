@@ -23,6 +23,7 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
 });
 
-app.listen(4000, () => {
+const port =process.env.PORT || 3000
+app.listen(port, () => {
   console.log('Proxy server listening on port 4000!');
 });
